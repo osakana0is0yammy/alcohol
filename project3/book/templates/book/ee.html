@@ -1,0 +1,31 @@
+<!--何を記入するかお題を出す画面.modelはFourth-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+
+</head>
+<body bgcolor="white">
+    <div align="center">
+        <br><br><br><br>
+        <a href="{% url 'index' %}" class="btn">選択画面に戻る</a>
+        <a href="{% url 'eein' %}" class="btn">説明に戻る</a>
+        <div class = "inner">
+            {% for item in data %}
+            <p>お題：{{item.Fcontent}}</p>
+            {% endfor %}
+            <br><br>
+            次へをクリックするのはお題を書いてから押してください
+            <br><br>
+            <a href="{% url 'eenext' %}" class="btn">次へ</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>

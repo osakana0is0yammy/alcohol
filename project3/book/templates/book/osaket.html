@@ -1,0 +1,29 @@
+<!--お酒危機一髪-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/stylehige.css' %}" />
+   
+
+</head>
+<body bgcolor="white">
+    <div align="center">
+        <div class = "inner">
+            <a href="{% url 'index' %}" class="btn">選択画面に戻る</a>
+            <a href="{% url 'osakein' %}" class="btn">説明に戻る</a>
+            <br><br>
+            {% for item in data %}
+            <p>{{item.Econtent}}</p>
+            {% endfor %}
+            <br>
+            <a href="{% url 'osaket' %}" class="btn1">次へ</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>

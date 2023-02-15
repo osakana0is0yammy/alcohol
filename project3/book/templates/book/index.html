@@ -1,0 +1,26 @@
+<!--初期画面．選択-->
+{% load static %}
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title><!--ウェブサイト上部の説明欄てきな-->
+    <link rel="stylesheet" type="text/css" href="{% static 'ran/style.css' %}" />
+   
+
+</head>
+<body bgcolor="white">
+    <div align="right"><a href="{% url 'login'%}" class="btn">ログイン</a><br><br>
+    <div align="center">
+        <div class = "inner">
+            <a href="{% url 'osaindex'%}" class="btn">お題が出現するゲームです</a><br><br><br>
+            <a href="{% url 'eein' %}" class="btn">お絵描きランダム</a><br><br><br>
+            <a href="{% url 'osakein' %}" class="btn">お酒危機一髪</a>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
